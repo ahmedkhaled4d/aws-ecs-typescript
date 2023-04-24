@@ -1,14 +1,12 @@
 # AWS ECS Fargate - TypeScript App
 
-[Correlating Video Tutorial](https://youtu.be/eaS1jza_hy0)  
 ### Prerequisites
 - AWS account with programatic access
 - [AWS CLI](https://aws.amazon.com/cli/) must be installed
-- Domain name in Route 53 ([talentize.com](https://www.talentize.com) is my example)  
+- Domain name in Route 53 ([empoweromics.com](https://empoweromics.com/) is my example)  
 
 ## Creates an AWS ECS Fargate Infrastructure
-![API Infastructure](https://www.aaronwht.com/images/fargate/fargate-nginx.png)  
-
+ 
 ### Running this App locally
 `npm i`  
 `npm run dev`  
