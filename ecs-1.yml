@@ -11,7 +11,7 @@ Parameters:
 Resources:
   ACMCertificate:
     Type: AWS::CertificateManager::Certificate
-    Properties: 
+    Properties:
       DomainName: !Sub "api.${DomainName}"
       DomainValidationOptions:
         - DomainName: !Sub "api.${DomainName}"
@@ -52,7 +52,7 @@ Resources:
               Action:
                 - ses:SendEmail
               Effect: Allow
-              Resource: '*'
+              Resource: "*"
           PolicyName: send-mail
   ContainerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -125,7 +125,6 @@ Resources:
         - !Ref Subnet2ID
       SecurityGroups:
         - !GetAtt LoadBalancerSecurityGroup.GroupId
-
 # aws cloudformation create-stack --stack-name aws-ecs-typescript-api --template-body file://./ecs-1.yml --capabilities CAPABILITY_NAMED_IAM \
 # --parameters ParameterKey=VPCID,ParameterValue=YOUR_VPC_ID \
 # ParameterKey=Subnet1ID,ParameterValue=YOUR_SUBNET_1_ID \
